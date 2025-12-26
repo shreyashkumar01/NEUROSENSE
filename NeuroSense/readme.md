@@ -83,11 +83,7 @@ Before running NEUROSENSE locally, ensure you have the following installed:
    # If cloning from repository
    git clone <repository-url>
    cd neurosense
-   
-   # If extracting from ZIP file
-   unzip neurosense.zip
-   cd neurosense
-   ```
+
 
 2. **Directory Structure Overview**
    The project structure should look like this:
@@ -148,3 +144,4 @@ Before running NEUROSENSE locally, ensure you have the following installed:
 
 **Port Conflicts**
 If you encounter port conflicts, stop dfx and restart with a different port:
+
