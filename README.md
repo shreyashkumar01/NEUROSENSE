@@ -1,4 +1,4 @@
-1. What is NEUROSENSE? (In Simple Words)
+1. What is NEUROSENSE? 
 
 NEUROSENSE is a mobile and web app that helps people recover after brain or nerve problems.
 
