@@ -351,14 +351,14 @@ export default function LandingPage() {
             <div className="flex items-center gap-2">
               <Heart className="h-5 w-5 text-destructive" />
               <span className="text-muted-foreground">
-                © 2025. Built with love using{' '}
+                © 2025.
                 <a 
-                  href="https://caffeine.ai" 
+                  href="" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  caffeine.ai
+                NeuroSense
                 </a>
               </span>
             </div>
@@ -372,4 +372,5 @@ export default function LandingPage() {
       </footer>
     </div>
   );
+
 }
