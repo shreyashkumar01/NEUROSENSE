@@ -260,20 +260,20 @@ export default function DoctorDashboard() {
         </div>
       </main>
 
-      {/* Footer */}
+     {/* Footer */}
       <footer className="border-t py-6 mt-12 bg-background">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
           <div className="flex items-center justify-center gap-2">
             <Heart className="h-4 w-4 text-destructive" />
             <span>
-              © 2025. Built with love using{' '}
+              © 2025.
               <a 
-                href="https://caffeine.ai" 
+                href="" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
-                caffeine.ai
+                NEUROSENSE
               </a>
             </span>
           </div>
