@@ -222,7 +222,7 @@ export default function PatientDashboard() {
             <span>
               © 2025.
               <a 
-                href="https://caffeine.ai" 
+                href="" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
@@ -237,3 +237,4 @@ export default function PatientDashboard() {
   );
 
 }
+
