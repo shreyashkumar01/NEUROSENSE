@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NEUROSENSE - Clinical Neuro-Recovery Protocol</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            prism: {
+              bg: '#f0fdf4', // Very light emerald
+              text: '#064e3b', // Dark emerald
+              accent: '#10b981', // Emerald
+              dark: '#022c22', // Deep emerald
+              blue: '#3b82f6' // Blue accent
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Images/Favicon/favicon-16x16.png">
+  <link rel="icon" href="/Images/Favicon/favicon.ico">
+  <link rel="manifest" href="/Images/Favicon/site.webmanifest">
+  <style>
+    :root {
+      --clinical-bg: #f8fdfe;
+      --clinical-border: rgba(5, 46, 22, 0.08);
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    .dark {
+      --clinical-bg: #000000;
+      --clinical-border: rgba(255, 255, 255, 0.12);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--clinical-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      margin: 0;
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      letter-spacing: -0.04em;
+    }
+
+    /* Ultimate Hairline Precision */
+    .hairline {
+      border: 0.5px solid var(--clinical-border);
+    }
+
+    /* Premium Glassmorphism */
+    .glass-ui {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(40px) saturate(180%);
+      -webkit-backdrop-filter: blur(40px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .specular {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 15px 40px -10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .specular {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 15px 40px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes morph {
+
+      0%,
+      100% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: scale(1);
+      }
+
+      50% {
+        border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%;
+        transform: scale(1.05);
+      }
+    }
+
+    .animate-morph {
+      animation: morph 15s ease-in-out infinite;
+    }
+
+    /* Noise Texture Engine */
+    .noise-layer {
+      filter: url(#grain);
+    }
+
+    .resolve-ui {
+      animation: resolveIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes resolveIn {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    /* Hide ugly scrollbars */
+    ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    .clinical-mono {
+      font-family: var(--font-mono);
+    }
+
+    /* Native-feel safe area fix for mobile bars */
+    .safe-nav {
+      padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
+    }
+  </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="min-h-screen">
+  <svg style="position: absolute; width: 0; height: 0; visibility: hidden;">
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.06" />
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="overlay" />
+    </filter>
+  </svg>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "NEUROSENSE",
+  "description": "An AI-powered rehabilitation app for recovering brain, body, and speech functions at home. Designed for post-stroke, Parkinson's, and neuro-recovery patients.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
