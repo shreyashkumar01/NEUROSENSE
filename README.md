@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="./public/Images/logo.png" width="120" height="auto" alt="NeuroSense Logo" />
 
 # NeuroSense
 ### Clinical Neuro-Recovery Platform
